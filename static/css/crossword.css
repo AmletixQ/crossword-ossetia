@@ -1,0 +1,62 @@
+@font-face {
+	font-family: 'VAG World Bold';
+	src: url('../fonts/vag_world_bold.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/vag_world_bold.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/vag_world_bold.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/vag_world_bold.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/vag_world_bold.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/vag_world_bold.svg#vag_world_bold') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+.margin-block {
+        margin-top: 5vh;
+        text-align: center;
+        }
+.margin-block table {
+        border-collapse: collapse;
+        width: 90vw;
+        height: 40vw;
+        margin: auto;
+        align: center;
+        }
+.margin-block input {
+        margin-top: 5vh;
+        width: 80%;
+        height: 40px;
+        text-align: center;
+    }
+.td {
+        width: 10%;
+        border: 1px solid black;
+        box-sizing: border-box;
+        }
+.bold_td {
+        width: 10%;
+        border: 4px solid black;
+        box-sizing: border-box;
+        font-weight: bold;
+    }
+.num {
+        width: 10%;
+        border: none;
+        box-sizing: border-box;
+        text-align: right;
+        font-size: 120%;
+    }
+.button {
+  display: inline-block;
+  background: #2196f3;
+  color: #fff;
+  padding: 10%;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 200%;
+  width: 80%;
+  line-height: 1;
+  font-weight: 100;
+  border: none;
+}
+.question {
+    margin-top: 30px;
+
+}
