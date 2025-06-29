@@ -7,11 +7,19 @@ from data.words import Words
 from forms.user import RegisterForm, LoginForm
 from flask_login import LoginManager, login_user, logout_user, login_required, current_user
 
-app = Flask(__name__)
-app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
-login_manager = LoginManager()
-login_manager.init_app(app)
 
+login_manager = LoginManager()
+
+def main():
+    app = Flask(__name__)
+    app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
+    login_manager.init_app(app)
+
+    db_session.global_init("db/crosswords.db")
+
+    return app
+
+app = main();
 
 @login_manager.user_loader
 def load_user(user_id):
@@ -151,10 +159,5 @@ def register():
     return render_template('register.html', title='Регистрация', form=form)
 
 
-def main():
-    db_session.global_init("db/crosswords.db")
-
-
 if __name__ == '__main__':
-    main()
-    app.run(host='0.0.0.0', port=8003)
+    app.run()
